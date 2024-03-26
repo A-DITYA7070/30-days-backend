@@ -13,6 +13,14 @@ const expenseSchema = new Schema({
         type:Date,
         default:new Date(Date.now())
     },
+    from:{
+        type:Date,
+        default:new Date(Date.now())
+    },
+    to:{
+        type:Date,
+        required:[true,"Time Frame to is required "]
+    },
     amount:{
         type:String,
         required:[true,"Amount of expense is required "]
